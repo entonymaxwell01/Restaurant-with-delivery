@@ -1,7 +1,7 @@
 package delivery.system;
 
 
-class Entrega {
+public class Entrega {
     private int ID;
     private String endereco;
     private float valor;
@@ -12,6 +12,9 @@ class Entrega {
         this.endereco = endereco;
         this.valor = valor;
         this.status = 0;
+    }
+
+    public Entrega() {
     }
 
     public int getID() {

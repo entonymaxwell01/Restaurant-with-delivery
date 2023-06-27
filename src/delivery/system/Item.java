@@ -2,8 +2,7 @@ package delivery.system;
 import java.util.ArrayList;
 import java.util.List;
 
-
-class Item {
+public class Item {
     private int ID;
     private String nome;
     private float valor;
@@ -14,6 +13,9 @@ class Item {
         this.nome = nome;
         this.valor = valor;
         this.avaliacoes = new ArrayList<>();
+    }
+
+    public Item() {
     }
 
     public int getID() {

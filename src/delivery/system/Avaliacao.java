@@ -12,6 +12,9 @@ class Avaliacao {
         this.numEstrelas = numEstrelas;
     }
 
+    public Avaliacao() {
+    }
+
     public int getID() {
         return ID;
     }

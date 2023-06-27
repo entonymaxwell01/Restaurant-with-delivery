@@ -9,6 +9,14 @@ class Cliente extends Usuario {
     private List<Avaliacao> avaliacoes;
     private List<Pedido> pedidos;
 
+    public Cliente(int ID, String nome, int cpf) {
+        super(ID, nome, cpf);
+        this.endereco = "";
+        this.telefone = "";
+        this.avaliacoes = new ArrayList<>();
+        this.pedidos = new ArrayList<>();
+    }
+
     public Cliente(int ID, String nome, int cpf, String endereco, String telefone) {
         super(ID, nome, cpf);
         this.endereco = endereco;
@@ -33,6 +41,14 @@ class Cliente extends Usuario {
         this.telefone = telefone;
     }
 
+    public List<Avaliacao> getAvaliacoes() {
+        return avaliacoes;
+    }
+
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
     public void realizarPedido(Pedido pedido) {
         pedidos.add(pedido);
     }
@@ -47,3 +63,4 @@ class Cliente extends Usuario {
         return avaliacoes;
     }
 }
+

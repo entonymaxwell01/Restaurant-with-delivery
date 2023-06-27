@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-class NotaFiscal {
+public class NotaFiscal {
     private int ID;
     private String horario;
     private List<Pedido> pedidos;
@@ -12,6 +12,9 @@ class NotaFiscal {
         this.ID = ID;
         this.horario = horario;
         this.pedidos = new ArrayList<>();
+    }
+
+    public NotaFiscal() {
     }
 
     public int getID() {

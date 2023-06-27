@@ -2,8 +2,7 @@ package delivery.system;
 import java.util.ArrayList;
 import java.util.List;
 
-
-class Pedido {
+public class Pedido {
     private int ID;
     private Cliente clientePedido;
     private float valor;
@@ -18,6 +17,9 @@ class Pedido {
         this.itens = new Item[0];
         this.avaliacoes = new ArrayList<>();
         this.entregaConcluida = false;
+    }
+
+    public Pedido() {
     }
 
     public int getID() {
@@ -40,12 +42,8 @@ class Pedido {
         return valor;
     }
 
-    public void calcularValorPedido() {
-        float total = 0.0f;
-        for (Item item : itens) {
-            total += item.getValor();
-        }
-        this.valor = total;
+    public void setValor(float valor) {
+        this.valor = valor;
     }
 
     public Item[] getItens() {
@@ -64,8 +62,20 @@ class Pedido {
         this.avaliacoes = avaliacoes;
     }
 
-    public boolean EntregaConcluida() {
+    public boolean isEntregaConcluida() {
         return entregaConcluida;
+    }
+
+    public void setEntregaConcluida(boolean entregaConcluida) {
+        this.entregaConcluida = entregaConcluida;
+    }
+
+    public void calcularValorPedido() {
+        float total = 0.0f;
+        for (Item item : itens) {
+            total += item.getValor();
+        }
+        this.valor = total;
     }
 
     public void adicionarItemPedido(Item item) {
@@ -101,9 +111,5 @@ class Pedido {
 
     public void concluirEntrega() {
         this.entregaConcluida = true;
-    }
-
-    public boolean isEntregaConcluida() {
-        return entregaConcluida;
     }
 }

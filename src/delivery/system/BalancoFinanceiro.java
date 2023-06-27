@@ -5,6 +5,15 @@ class BalancoFinanceiro {
     private float entrada;
     private float saida;
 
+    public BalancoFinanceiro() {
+    }
+
+    public BalancoFinanceiro(float saldo, float entrada, float saida) {
+        this.saldo = saldo;
+        this.entrada = entrada;
+        this.saida = saida;
+    }
+
     public float getSaldo() {
         return saldo;
     }
